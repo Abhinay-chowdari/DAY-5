@@ -1,20 +1,27 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-int main()
+int main ()
 {
-    int rows, num = 1;
-    cout << "Enter number of rows: ";
-    cin >> rows;
+    int qty,amt,value;
+    float dis,ta;
+    cout<<"enter the quantity of item =";
+    cin>>qty;
+    cout<<"enter the value of per item =";
+    cin>>value;
 
-    for(int i = 1; i <= rows; i++)
-   {
-        for(int j = 1; j <= i; j++)
-        {
-            cout << num*num*num << " ";
-            num++;
-        }
-        cout << endl;
+    amt=qty*value;
+
+    cout<<"your amount is "<<amt;
+
+    if (amt>1000)
+    {
+       cout<<"\n you got 10 percent discount  ";
+       dis=amt*0.1;
+       ta= amt-dis;
+       cout<<"\n your total amount is "<<ta;
     }
- 
-    return 0;
+
+    else
+    cout<<"\n you do not get any discount";
+   return 0;
 }
